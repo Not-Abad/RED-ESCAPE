@@ -1,4 +1,4 @@
-# 🚀 RED ESCAPE
+# RED ESCAPE
 
 ![Godot Engine](https://img.shields.io/badge/Godot_Engine-4.x-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)
 ![GDScript](https://img.shields.io/badge/GDScript-Native-355570?style=for-the-badge&logo=godotengine&logoColor=white)
@@ -12,21 +12,21 @@
 
 ---
 
-## ✨ Características
+##  Características
 
-* 🪐 **Exploración del planeta Marte:** Recorre escenarios hostiles y desconocidos en la superficie y el subsuelo marciano.
-* 🧑‍🚀 **Supervivencia en un entorno extraterrestre:** Gestiona tus movimientos y recursos para mantenerte con vida frente a las amenazas del planeta.
-* 🔧 **Recuperación de piezas para reparar la nave espacial:** Busca y recolecta componentes clave necesarios para lograr escapar de Marte.
-* 👾 **Encuentros con formas de vida alienígenas:** Enfréntate a distintas criaturas nativas del entorno marciano.
-* 🧠 **Enemigos con inteligencia artificial:** Comportamientos dinámicos diseñados para reaccionar a la presencia del jugador.
-* ⚔️ **Sistema de persecución y ataque de enemigos:** Mecánicas de detección, seguimiento y combate en tiempo real.
-* 🎞️ **Animaciones de movimiento, ataque y daño:** Transiciones visuales en pixel art para las acciones del personaje y los enemigos.
-* 🖥️ **Menús de inicio y configuración:** Interfaz completa con opciones de navegación, ajustes y control de partida.
-* 🌌 **Ambientación de ciencia ficción, misterio y suspenso:** Atmósfera inmersiva inspirada en la exploración espacial soviética.
+*  **Exploración del planeta Marte:** Recorre escenarios hostiles y desconocidos en la superficie y el subsuelo marciano.
+*  **Supervivencia en un entorno extraterrestre:** Gestiona tus movimientos y recursos para mantenerte con vida frente a las amenazas del planeta.
+*  **Recuperación de piezas para reparar la nave espacial:** Busca y recolecta componentes clave necesarios para lograr escapar de Marte.
+*  **Encuentros con formas de vida alienígenas:** Enfréntate a distintas criaturas nativas del entorno marciano.
+*  **Enemigos con inteligencia artificial:** Comportamientos dinámicos diseñados para reaccionar a la presencia del jugador.
+*  **Sistema de persecución y ataque de enemigos:** Mecánicas de detección, seguimiento y combate en tiempo real.
+*  **Animaciones de movimiento, ataque y daño:** Transiciones visuales en pixel art para las acciones del personaje y los enemigos.
+*  **Menús de inicio y configuración:** Interfaz completa con opciones de navegación, ajustes y control de partida.
+*  **Ambientación de ciencia ficción, misterio y suspenso:** Atmósfera inmersiva inspirada en la exploración espacial soviética.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 * **Godot Engine:** Motor de desarrollo utilizado para la construcción de escenas, físicas 2D, colisiones y renderizado.
 * **GDScript:** Lenguaje de programación principal para implementar la lógica del juego, inteligencia artificial e interfaces.
@@ -35,7 +35,7 @@
 
 ---
 
-## 💻 Código
+##  Código
 
 Este repositorio contiene los archivos y recursos de desarrollo del videojuego **Red Escape**, incluyendo escenas, scripts, sistemas de juego, interfaces y elementos necesarios para su desarrollo e integración.
 
@@ -56,19 +56,19 @@ red-escape/
 
 ---
 
-## 👥 Desarrolladores
+##  Desarrolladores
 
 | Integrante | Usuario de GitHub |
 | :--- | :--- |
-| **Jesús Abad** | [@Not-Abad](https://github.com/Not-Abad) |
-| **Alan** | Alan |
-| **Angie** | Angie |
-| **ManuSan11** | [@ManuSan11](https://github.com/ManuSan11) |
-| **nlovvecc** | [@nlovvecc](https://github.com/nlovvecc) |
+| **Abad Romero Jesús** | [@Not-Abad](https://github.com/Not-Abad) |
+| **Cruz Chiu Natalia** | [@nlovvecc](https://github.com/nlovvecc) |
+| **Guzman Villa Angelica Maria** | [@angiee2110](https://github.com/angiee2110) |
+| **Rentería Sánchez Manuel** | [@ManuSan11](https://github.com/ManuSan11) |
+| **Villagrán García Alan Javier** | [@alanscg05-tech](https://github.com/alanscg05-tech) |
 
 ---
 
-## 🛡️ Propiedad Intelectual
+##  Propiedad Intelectual
 
 **Red Escape** y sus elementos originales forman parte del proyecto desarrollado por sus creadores.
 
