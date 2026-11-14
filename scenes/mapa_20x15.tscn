@@ -1,0 +1,87 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/map/escenario_20x15.png" id="1_map"]
+
+[sub_resource type="RectangleShape2D" id="wall_h"]
+size = Vector2(640, 32)
+[sub_resource type="RectangleShape2D" id="wall_v"]
+size = Vector2(32, 480)
+[sub_resource type="RectangleShape2D" id="pillar"]
+size = Vector2(36, 48)
+[sub_resource type="RectangleShape2D" id="pit"]
+size = Vector2(92, 78)
+[sub_resource type="RectangleShape2D" id="crate"]
+size = Vector2(32, 32)
+[sub_resource type="RectangleShape2D" id="barrel"]
+size = Vector2(30, 34)
+
+[node name="Mapa20x15" type="Node2D"]
+
+[node name="Escenario" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_map")
+position = Vector2(320, 240)
+scale = Vector2(0.512, 0.48)
+
+[node name="Colisiones" type="Node2D" parent="."]
+
+[node name="ParedSuperior" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/ParedSuperior"]
+position = Vector2(320, 16)
+shape = SubResource("wall_h")
+
+[node name="ParedInferior" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/ParedInferior"]
+position = Vector2(320, 464)
+shape = SubResource("wall_h")
+
+[node name="ParedIzquierda" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/ParedIzquierda"]
+position = Vector2(16, 240)
+shape = SubResource("wall_v")
+
+[node name="ParedDerecha" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/ParedDerecha"]
+position = Vector2(624, 240)
+shape = SubResource("wall_v")
+
+[node name="Pilar1" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/Pilar1"]
+position = Vector2(245, 145)
+shape = SubResource("pillar")
+[node name="Pilar2" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/Pilar2"]
+position = Vector2(397, 145)
+shape = SubResource("pillar")
+[node name="Pilar3" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/Pilar3"]
+position = Vector2(245, 315)
+shape = SubResource("pillar")
+[node name="Pilar4" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/Pilar4"]
+position = Vector2(397, 315)
+shape = SubResource("pillar")
+
+[node name="FosoIzq" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/FosoIzq"]
+position = Vector2(170, 240)
+shape = SubResource("pit")
+[node name="FosoDer" type="StaticBody2D" parent="Colisiones"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Colisiones/FosoDer"]
+position = Vector2(470, 240)
+shape = SubResource("pit")
+
+[node name="SpawnJugador" type="Marker2D" parent="."]
+position = Vector2(320, 400)
+
+[node name="PuertaNorte" type="Marker2D" parent="."]
+position = Vector2(320, 40)
+[node name="PuertaSur" type="Marker2D" parent="."]
+position = Vector2(320, 440)
+[node name="PuertaOeste" type="Marker2D" parent="."]
+position = Vector2(40, 240)
+[node name="PuertaEste" type="Marker2D" parent="."]
+position = Vector2(600, 240)
+
+[node name="Camara" type="Camera2D" parent="."]
+position = Vector2(320, 240)

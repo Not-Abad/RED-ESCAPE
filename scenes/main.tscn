@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://ogggy5j3iio3"]
+
+[ext_resource type="PackedScene" uid="uid://btr0a1a4roi5e" path="res://scenes/word.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://duq40fca2uop8" path="res://scenes/character.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://dtoqojfhl5lh1" path="res://scenes/weapon.gd" id="3_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://ckmu55r11n6pr" path="res://scenes/weapon/weapon.png.png" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://bwtqyo3sc4tat" path="res://modules/ui/pause_menu.tscn" id="3_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://bq2e7yfb2p58e" path="res://scenes/weapon/arma_smg_40x16.png" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://bx30ue82qgosn" path="res://modules/enemies/Boss_P1/enemy_alien.tscn" id="6_tefeu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_68sp5"]
+radius = 55.000004
+
+[node name="main" type="Node" unique_id=1662238557]
+
+[node name="Word" parent="." unique_id=718726332 instance=ExtResource("1_o5qli")]
+position = Vector2(3, 0)
+
+[node name="Character" parent="." unique_id=1154602037 instance=ExtResource("2_0wfyh")]
+position = Vector2(370.00003, 319.00003)
+rotation = -0.033794437
+scale = Vector2(3, 3)
+
+[node name="PauseMenu" parent="." unique_id=133950272 instance=ExtResource("3_tbgi4")]
+
+[node name="weapon" type="Node2D" parent="." unique_id=1748799740]
+script = ExtResource("3_jyhfs")
+
+[node name="Sprite2D2" type="Sprite2D" parent="weapon" unique_id=302267729]
+texture_filter = 1
+position = Vector2(100, 100)
+rotation = 0.07829261
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_sugp2")
+
+[node name="Area2D" type="Area2D" parent="weapon" unique_id=569362236]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="weapon/Area2D" unique_id=742533923]
+position = Vector2(100, 100)
+rotation = -0.022324275
+scale = Vector2(2, 2)
+skew = -0.012217305
+shape = SubResource("CircleShape2D_68sp5")
+debug_color = Color(0.96494764, 0.1380871, 0.3329883, 0.41960785)
+
+[node name="smg" type="Node2D" parent="." unique_id=1778699402]
+script = ExtResource("3_jyhfs")
+invertir_arma = false
+grip_ratio = Vector2(0.38, 0.62)
+cadencia = 0.1
+
+[node name="Sprite2D2" type="Sprite2D" parent="smg" unique_id=83011738]
+texture_filter = 1
+position = Vector2(500, 100)
+texture = ExtResource("5_tbgi4")
+
+[node name="Area2D" type="Area2D" parent="smg" unique_id=1202696010]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="smg/Area2D" unique_id=1147578485]
+position = Vector2(100, 100)
+rotation = -0.022324275
+scale = Vector2(2, 2)
+skew = -0.012217305
+shape = SubResource("CircleShape2D_68sp5")
+debug_color = Color(0.96494764, 0.1380871, 0.3329883, 0.41960785)
+
+[node name="Boss_Pulcoro" parent="." unique_id=423219194 instance=ExtResource("6_tefeu")]
+position = Vector2(471, 320)
+scale = Vector2(2.2, 2.2)
+
+[connection signal="body_entered" from="weapon/Area2D" to="weapon" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="smg/Area2D" to="smg" method="_on_area_2d_body_entered"]

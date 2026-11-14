@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bm4pox1gkgr0e"]
+
+[ext_resource type="SpriteFrames" uid="uid://cxta5txubqqdi" path="res://modules/enemies/enemies_plantong/plankton_final.tres" id="1_d08lw"]
+[ext_resource type="Script" uid="uid://cmbjcaf63co1w" path="res://modules/enemies/enemies_plantong/proyectil_plantong.gd" id="1_fonm2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l2a60"]
+height = 20.0
+
+[node name="ProyectilPlantong" type="Area2D" unique_id=135493988]
+collision_layer = 8
+script = ExtResource("1_fonm2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2016748390]
+texture_filter = 1
+sprite_frames = ExtResource("1_d08lw")
+animation = &"proyectil"
+frame = 2
+frame_progress = 0.8603226
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=144009580]
+texture_filter = 1
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_l2a60")

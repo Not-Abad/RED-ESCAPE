@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bpwtbexgw53fh"]
+
+[ext_resource type="Script" uid="uid://bf0vm8txos8dx" path="res://modules/enemies/enemies_plantong/enemies_plantong.gd" id="1_cuwid"]
+[ext_resource type="SpriteFrames" uid="uid://cxta5txubqqdi" path="res://modules/enemies/enemies_plantong/plankton_final.tres" id="2_cuwid"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qre5"]
+height = 26.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0qre5"]
+radius = 33.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_skwpn"]
+height = 26.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1561028549]
+scale = Vector2(3, 3)
+collision_layer = 2
+script = ExtResource("1_cuwid")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=10516249]
+texture_filter = 1
+sprite_frames = ExtResource("2_cuwid")
+animation = &"attack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2117825545]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_0qre5")
+
+[node name="AttackRange" type="Area2D" parent="." unique_id=210977962]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange" unique_id=2111437423]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_0qre5")
+
+[node name="AttackCooldown" type="Timer" parent="." unique_id=920218719]
+wait_time = 1.5
+one_shot = true
+
+[node name="HurtBox" type="Area2D" parent="." unique_id=392488982]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox" unique_id=797216295]
+position = Vector2(-2, 0)
+shape = SubResource("CapsuleShape2D_skwpn")
+
+[node name="PuntoDisparoIzquierdo" type="Marker2D" parent="." unique_id=667354101]
+position = Vector2(-10, 3)
+
+[node name="PuntoDisparoDerecho" type="Marker2D" parent="." unique_id=1054050140]
+position = Vector2(10, 5)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1154394814]
+zoom = Vector2(10, 10)

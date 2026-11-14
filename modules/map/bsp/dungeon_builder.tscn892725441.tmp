@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://2b754m4l4vyi"]
+
+[ext_resource type="Script" uid="uid://b1ceq88cr1ke6" path="res://bsp/dungeon_builder.gd" id="1_ffnfw"]
+[ext_resource type="Script" uid="uid://br0ofdbxoho6d" path="res://bsp/bsp_generator.gd" id="2_3mfst"]
+[ext_resource type="Texture2D" uid="uid://bku30pml1s6y0" path="res://assets/Grass.png" id="3_exqc1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v4baq"]
+texture = ExtResource("3_exqc1")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_76lig"]
+sources/0 = SubResource("TileSetAtlasSource_v4baq")
+
+[node name="DungeonBuilder" type="Node2D" unique_id=71591383 node_paths=PackedStringArray("tilemap_layer", "bsp_generator")]
+script = ExtResource("1_ffnfw")
+tilemap_layer = NodePath("TileMapLayer")
+bsp_generator = NodePath("BSPGenerator")
+source_id = null
+floor_tiles = null
+wall_tile = null
+hallway_tile = null
+
+[node name="BSPGenerator" type="Node" parent="." unique_id=1500799442]
+script = ExtResource("2_3mfst")
+map_size = null
+max_rooms = null
+min_room_size = null
+corridor_width = null
+extra_loop_count = null
+metadata/_custom_type_script = "uid://br0ofdbxoho6d"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1008533053]
+tile_set = SubResource("TileSet_76lig")
